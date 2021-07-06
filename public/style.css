@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700;900&display=swap');
+
+.error{
+    display:none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    /* disable scroll */
+    overflow: hidden;
+}
+body{
+    background-color: black;
+}
+
+/* skywarfare splash-screen */
+.overall{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name{
+    background-color: black;
+}
+.container h4{
+    display: inline;
+    font-size: 6em;
+    opacity: 0;         /* to make it initially invisible */
+}
+
+/* Typewriter Effect */
+.name h4:nth-child(1){
+    animation: typewriter 0.01s calc(0.10s * 1 - 0.09s) forwards linear;
+}
+.name h4:nth-child(2){
+    animation: typewriter 0.01s calc(0.10s * 2 - 0.09s) forwards linear;
+}
+.name h4:nth-child(3){
+    animation: typewriter 0.01s calc(0.10s * 3 - 0.09s) forwards linear;
+}
+.name h4:nth-child(4){
+    animation: typewriter 0.01s calc(0.10s * 4 - 0.09s) forwards linear;
+}
+.name h4:nth-child(5){
+    animation: typewriter 0.01s calc(0.10s * 5 - 0.09s) forwards linear;
+}
+.name h4:nth-child(6){
+    animation: typewriter 0.01s calc(0.10s * 6 - 0.09s) forwards linear;
+}
+.name h4:nth-child(7){
+    animation: typewriter 0.01s calc(0.10s * 7 - 0.09s) forwards linear;
+}
+.name h4:nth-child(8){
+    animation: typewriter 0.01s calc(0.10s * 8 - 0.09s) forwards linear;
+}
+.name h4:nth-child(9){
+    animation: typewriter 0.01s calc(0.10s * 9 - 0.09s) forwards linear;
+}
+.name h4:nth-child(10){
+    animation: typewriter 0.01s calc(0.10s * 10 - 0.09s) forwards linear;
+}
+
+/* defining typewriter animation */
+@keyframes typewriter {
+    0%{
+        opacity: 0;
+    }
+    99%{
+        opacity: 0;              /* because we need sudden jump in opacity */
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.tagline{
+    display: flex;
+    justify-content: center;
+}
+.tagline p{
+    letter-spacing: 1.5em;
+    font-weight: bold;
+    padding: 0.25em 0;             /* padding: vertical horizontal; */
+    background: white;
+    color: black;
+}
+
+/* Login Form */
+.loginSection{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginBox{
+    height: 40vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.loginBox h6{
+    font-size: 2em;
+}
+.loginBox button{
+    width: 40vw;
+    padding: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* to add dark push-down effect on hover */
+.loginBox button:hover{
+    cursor: pointer;
+    transform: translateY(2px);
+    filter: brightness(0.7);
+}
+
+.content p{
+    margin-top: 4vh;            /* separation between game code and button */
+}
+.content input{
+    width: 40vw;
+    padding: 1vh;
+    padding-bottom: 0;
+    margin-bottom: 1vh;
+    outline: none;
+    border: none;
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+
+/* style while entering input */
+.content input:focus{
+    border-bottom: 2px solid #ff9fc2;
+    color: #ff9fc2;
+}
+.content{
+    padding: 0 3vw;
+}
+
+
+/* Slider Effect */
+.slider{
+    transform: translateY(-100vh);
+    animation: slideDown 0.5s 3s forwards linear;
+}
+
+/* defining slideDown animation */
+@keyframes slideDown {
+    0%{
+        transform: translateY(-100vh);
+    }
+    60%{
+        transform: translateY(-60vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+/* Background */
+#bgImg{
+    position: absolute;
+    width: 100vw;
+    height: 400vh;
+    top: 0; left: 0;                 /* precaution to make sure no gaps appear b/w top left corner of screen and image */
+    z-index: -10;
+    
+    transform: translateY(-300vh);      /* To coincide bottom left corners of screen and image. */
+}
+svg{
+    transform: translateY(100vh);
+}
+#bgImg #_1{
+    animation: down1 90s infinite;
+}
+@keyframes down1 {
+    to{
+        transform: translateY(400vh);
+    }
+}
+#bgImg #_2{
+    animation: down2 75s infinite;
+}
+@keyframes down2 {
+    to{
+        transform: translateY(400vh);
+    }
+}
+#bgImg #_3{
+    box-sizing: border-box;
+    transform-origin: center;
+    /* Top two statements to bring the origin of the element to it's center from the top left corner */
+    transform: scale(0.75);
+    animation: down3 60s infinite;
+}
+@keyframes down3 {
+    to{
+        transform: scale(0.75) translateY(400vh);
+    }
+}
+
+#mainJet{
+    position: absolute;
+    top: 250vh;
+    right: 100vw;
+    z-index: -1;
+    /* filter: invert(); */
+    box-sizing: border-box;
+    transform-origin: top center;
+    /* Top two statements to bring the origin of the element to it's center from the top left corner */
+    transform: rotate(55deg) scale(0.2);
+    animation: flyacross 4s 3.5s forwards linear;
+}
+@keyframes flyacross {
+    to{
+        transform: rotate(55deg) scale(0.2) translateY(-3000vh);
+    }
+}
+
+/* toggling error message on small sized screens */
+@media screen and (max-height:420px) {
+    #mainJet{
+        display: none;
+    } 
+    .slider{
+        display: none;
+    }
+    .error{
+        display: block;
+        text-align: center;
+        color: tomato;
+        font-size: 1.5em;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+    }
+}
